@@ -67,8 +67,8 @@
 
 import AnalyticsCard from '@/components/analytics-card'
 import React from 'react'
-import { chartConfig, chartData, DashboardAnalyticsData, } from '../../../public/Data/data'
-import { MixedBarChart } from './(component)/mixedBarChart'
+import { product_price_chartConfig, ProductPricechartData, DashboardAnalyticsData, } from '../../../public/Data/data'
+import { MixedBarChart } from './(_components)/mixedBarChart'
 
 
 const Dashboard = () => {
@@ -99,7 +99,7 @@ const Dashboard = () => {
         tradeGrowth={DashboardAnalyticsData.ProjectsData.tradeGrowth}
         data={DashboardAnalyticsData.ProjectsData.graphData} />
       </div>
-      <MixedBarChart chartData = {chartData} chartConfig = {chartConfig}/>
+      <MixedBarChart chartData = {ProductPricechartData} chartConfig = {product_price_chartConfig}/>
     </>
   )
 }
