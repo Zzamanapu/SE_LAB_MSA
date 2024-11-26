@@ -65,19 +65,18 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-const AnalyticsCard = ({tradeTitle, tradeValue, tradeGrowth, data}: any) => {
+const AnalyticsCard = ({ tradeTitle, tradeValue, tradeGrowth, data }: any) => {
   return (
-    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-2">
-      <Card className='min-w-[400px]'>
+    // <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-2">
+      <Card className='mb-5 min-w-[300px]'>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-normal">{tradeTitle}</CardTitle>
         </CardHeader>
         <CardContent className="pb-0">
           <div className="text-2xl font-bold">{tradeValue}</div>
           <p className="text-xs text-muted-foreground">
-            {`+${tradeGrowth}% from last month`}
+            +{tradeGrowth}% from last month
           </p>
-        
           <ChartContainer config={chartConfig} className="h-[80px] w-full">
             <LineChart
               data={data}
@@ -102,29 +101,10 @@ const AnalyticsCard = ({tradeTitle, tradeValue, tradeGrowth, data}: any) => {
           </ChartContainer>
         </CardContent>
       </Card>
-      {/* <Card>
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-normal">Subscriptions</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="text-2xl font-bold">+2350</div>
-          <p className="text-xs text-muted-foreground">
-            +180.1% from last month
-          </p>
-          <ChartContainer config={chartConfig} className="mt-2 h-[80px] w-full">
-            <BarChart data={data}>
-              <Bar
-                dataKey="subscription"
-                fill="var(--color-subscription)"
-                radius={4}
-              />
-            </BarChart>
-          </ChartContainer>
-        </CardContent>
-      </Card> */}
-    </div>
+   
   )
 }
 
 export default AnalyticsCard
+
 

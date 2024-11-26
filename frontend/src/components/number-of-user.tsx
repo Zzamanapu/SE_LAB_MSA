@@ -8,20 +8,20 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 
-const NumberOfUser = () => {
+const NumberOfUser = ({type, number, growth} : any) => {
     return (
-        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-            <Card className='min-w-[400px]'>
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4 mr-5 ml-5 mb-5">
+            <Card className='min-w-[350px]'>
                 <CardHeader className="flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
-                    <div className="grid flex-1 gap-1 text-center sm:text-left">
-                        <CardTitle>Area Chart - Interactive</CardTitle>
-                        <CardDescription>
-                            Showing total visitors for the last 3 months
+                    <div className="grid flex-1 gap-0 text-center sm:text-left justify-end">
+                        <CardDescription className='text-base text-black text-right'>
+                            {type}
                         </CardDescription>
+                        <CardTitle className='text-3xl text-right'>{number}</CardTitle>
                     </div>
                 </CardHeader>
                 <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
-                    <p>apu</p>
+                    <p className='text-gray-600'><span className='text-green-700 font-bold text-lg'>{growth}%</span> than last week</p>
                 </CardContent>
             </Card>
         </div>

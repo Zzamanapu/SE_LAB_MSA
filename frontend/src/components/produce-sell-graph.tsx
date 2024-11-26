@@ -16,13 +16,13 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 
-export function ProductSellGraph({chartData, chartConfig}:any) {
+export function ProductSellGraph({title, chartData, chartConfig}:any) {
   return (
-    <Card className="w-[400px]">
+    <Card className="w-[400px] mr-5">
       <CardHeader>
-        <CardTitle>Tooltip - Advanced</CardTitle>
+        <CardTitle>{title}</CardTitle>
         <CardDescription>
-          A data for last 7 days
+          A produce cell data grpah for last 7 days
         </CardDescription>
       </CardHeader>
       <CardContent>
