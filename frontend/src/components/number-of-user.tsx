@@ -14,7 +14,7 @@ const NumberOfUser = ({type, number, growth} : any) => {
             <Card className='min-w-[350px]'>
                 <CardHeader className="flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
                     <div className="grid flex-1 gap-0 text-center sm:text-left justify-end">
-                        <CardDescription className='text-base text-black text-right'>
+                        <CardDescription className='text-base text-black'>
                             {type}
                         </CardDescription>
                         <CardTitle className='text-3xl text-right'>{number}</CardTitle>
@@ -29,3 +29,5 @@ const NumberOfUser = ({type, number, growth} : any) => {
 }
 
 export default NumberOfUser
+
+

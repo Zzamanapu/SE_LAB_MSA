@@ -1,7 +1,7 @@
 import AnalyticsCard from '@/components/analytics-card'
 import React from 'react'
-import { product_price_chartConfig, ProductPricechartData, DashboardAnalyticsData, } from '../../../public/Data/data'
-import { MixedBarChart } from './(_components)/mixedBarChart'
+import { DashboardAnalyticsData, ProductPricechartGraph } from '../../../public/Data/data'
+import { MaxPriceGraph } from './(_components)/max-price-graph'
 import { DuelChart } from './(_components)/duel-graph'
 import { AnotherGraph } from './(_components)/another-graph'
 
@@ -35,7 +35,7 @@ const Dashboard = () => {
           data={DashboardAnalyticsData.ProjectsData.graphData} />
       </div>
       <div className='flex gap-5'>
-        <MixedBarChart chartData={ProductPricechartData} chartConfig={product_price_chartConfig} />
+        <MaxPriceGraph chartData={ProductPricechartGraph.chartData} chartConfig={ProductPricechartGraph.chartConfig} />
         <AnotherGraph />
       </div>
 

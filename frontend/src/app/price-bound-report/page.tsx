@@ -1,6 +1,8 @@
 import React from 'react'
 import { Payment, columns } from './colums'
 import { DataTable } from "./data-table"
+import { Table } from 'lucide-react'
+import TableMaking from './(_components)/table-making'
 
 
 const PriceBoundReport = () => {
@@ -12,9 +14,7 @@ const PriceBoundReport = () => {
     }]
 
     return (
-        <div className="container mx-auto py-10">
-            <DataTable columns={columns} data={data} />
-        </div>
+        <TableMaking/>
     )
 }
 
