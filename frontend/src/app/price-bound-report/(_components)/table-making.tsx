@@ -2,6 +2,8 @@ import { Button } from '@/components/ui/button'
 import React from 'react'
 import img1 from '../../../../public/images/profile-pic1.jpg'
 import img2 from '../../../../public/images/profile-pic2.jpg'
+import Image from 'next/image'
+import { ITableData } from '@/interfaces/required-interfaces'
 
 
 
@@ -24,7 +26,8 @@ const datas = [
     }
 ]
 
-const TableMaking = () => {
+const TableMaking = ({datas}: {datas: ITableData []}) => {
+    console.log(datas)
     return (
         <>
             <h1 className='font-extrabold text-4xl mb-5 mt-5'>Dashboard</h1>
@@ -37,8 +40,8 @@ const TableMaking = () => {
                     return (
                         <div className='bg-gray-100 min-h-24 min-w-[1000px] flex items-center justify-between pl-8 pr-8 mt-1'>
                             <div className='flex gap-6 items-center justify-start w-[400px]'>
-                                <div className='w-16'>
-                                    <img className=' w-full rounded-full' src="images/profile-pic.jpg" alt="Profile Picture" />
+                                <div className='w-16 h-16 rounded-full overflow-hidden'>
+                                    <Image className=' w-full' src={`/images/${data.image}`} alt="Profile Picture" height={0} width={0} sizes='100vw'/>
                                 </div>
                                 <div>
                                     <p className='text-lg font-bold'>{data.businessman}</p>
