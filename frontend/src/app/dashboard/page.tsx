@@ -37,6 +37,7 @@ const Dashboard = () => {
       <div className='flex gap-5'>
         <MaxPriceGraph chartData={ProductPricechartGraph.chartData} chartConfig={ProductPricechartGraph.chartConfig} />
         <AnotherGraph />
+        {/* <DuelChart/> */}
       </div>
 
     </>

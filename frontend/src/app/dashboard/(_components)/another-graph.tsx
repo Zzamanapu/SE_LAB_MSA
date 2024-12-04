@@ -17,14 +17,14 @@ import {
     ChartTooltip,
     ChartTooltipContent,
 } from "@/components/ui/chart"
-const chartData = [
-    { month: "January", desktop: 186, mobile: 80, tab: 80 },
-    { month: "February", desktop: 305, mobile: 200, tab: 80 },
-    { month: "March", desktop: 237, mobile: 120, tab: 80 },
-    { month: "April", desktop: 73, mobile: 190, tab: 80 },
-    { month: "May", desktop: 209, mobile: 130, tab: 80 },
-    { month: "June", desktop: 214, mobile: 140, tab: 80 },
-]
+// const chartData = [
+//     { month: "January", desktop: 186, mobile: 80, tab: 80 },
+//     { month: "February", desktop: 305, mobile: 200, tab: 80 },
+//     { month: "March", desktop: 237, mobile: 120, tab: 80 },
+//     { month: "April", desktop: 73, mobile: 190, tab: 80 },
+//     { month: "May", desktop: 209, mobile: 130, tab: 80 },
+//     { month: "June", desktop: 214, mobile: 140, tab: 80 },
+// ]
 
 const TotalGrowthDataForAll = [
     { month: "January", farmer_stock: 500, farmer_sales: 380, trader_stock: 700, trader_sales: 420, wholesaler_stock: 380, wholesaler_sales: 340, },
