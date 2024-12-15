@@ -64,9 +64,9 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
-export function AnotherGraph() {
+export function SalesStockCombo() {
     return (
-        <Card className="w-[600px]">
+        <Card>
             <CardHeader>
                 <CardTitle>Bar Chart - Multiple</CardTitle>
                 <CardDescription>January - June 2024</CardDescription>

@@ -26,7 +26,7 @@ export function MaxPriceGraph({ chartData, chartConfig }: any) {
     // console.log(currentDate, year, month, day)
     return (
         <div>
-            <Card className="w-[400px]">
+            <Card>
                 <CardHeader>
                     <CardTitle>Product Price</CardTitle>
                     <CardDescription>{year}/{month}/{day}</CardDescription>

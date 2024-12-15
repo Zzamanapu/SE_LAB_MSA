@@ -1,8 +1,9 @@
 import React from 'react'
 import { ProductSellGraph } from '@/components/produce-sell-graph'
 import { produce_cell_chartConfig, ProduceCellDataWholesaler, WholesalerAnalyticsData, NumberOfUserWholesaler } from '../../../public/Data/data'
-import AnalyticsCard from '@/components/analytics-card'
+
 import NumberOfUser from '@/components/number-of-user'
+import AnalyticsCard from '@/components/analytics-card'
 
 const Wholesalers = () => {
   return (

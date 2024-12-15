@@ -1,9 +1,9 @@
 import React from 'react'
 import { ProductSellGraph } from '@/components/produce-sell-graph'
 import { TraderAnalyticsData, produce_cell_chartConfig, ProduceCellDataTrader, NumberOfUserTrader } from '../../../public/Data/data'
-import AnalyticsCard from '@/components/analytics-card'
 import NumberOfUser from '@/components/number-of-user'
 import { TraderAreaChart } from './(_components)/area-chart'
+import AnalyticsCard from '@/components/analytics-card'
 
 
 const Traders = () => {

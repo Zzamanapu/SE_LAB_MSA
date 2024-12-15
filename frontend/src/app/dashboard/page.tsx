@@ -1,9 +1,12 @@
-import AnalyticsCard from '@/components/analytics-card'
+
 import React from 'react'
-import { DashboardAnalyticsData, ProductPricechartGraph } from '../../../public/Data/data'
+import { DashboardAnalyticsData, ProductPricechartGraph, UserAnalyticsData } from '../../../public/Data/data'
 import { MaxPriceGraph } from './(_components)/max-price-graph'
 import { DuelChart } from './(_components)/duel-graph'
-import { AnotherGraph } from './(_components)/another-graph'
+
+import NewGraph from '@/components/new-graph'
+import { SalesStockCombo } from './(_components)/another-graph'
+import AnalyticsCard from '@/components/analytics-card'
 
 
 const Dashboard = () => {
@@ -11,33 +14,33 @@ const Dashboard = () => {
   console.log(date)
   return (
     <>
-      <h1 className='font-extrabold text-4xl mb-5 mt-5'>Dashboard</h1>
-      <div className='flex gap-5'>
-        <AnalyticsCard
-          tradeTitle={DashboardAnalyticsData.AgroTradeData.tradeTitle}
-          tradeValue={DashboardAnalyticsData.AgroTradeData.tradeValue}
-          tradeGrowth={DashboardAnalyticsData.AgroTradeData.tradeGrowth}
-          data={DashboardAnalyticsData.AgroTradeData.graphData} />
-        <AnalyticsCard
-          tradeTitle={DashboardAnalyticsData.TradeSalesData.tradeTitle}
-          tradeValue={DashboardAnalyticsData.TradeSalesData.tradeValue}
-          tradeGrowth={DashboardAnalyticsData.TradeSalesData.tradeGrowth}
-          data={DashboardAnalyticsData.TradeSalesData.graphData} />
-        <AnalyticsCard
-          tradeTitle={DashboardAnalyticsData.RetailsData.tradeTitle}
-          tradeValue={DashboardAnalyticsData.RetailsData.tradeValue}
-          tradeGrowth={DashboardAnalyticsData.ProjectsData.tradeGrowth}
-          data={DashboardAnalyticsData.RetailsData.graphData} />
-        <AnalyticsCard
-          tradeTitle={DashboardAnalyticsData.ProjectsData.tradeTitle}
-          tradeValue={DashboardAnalyticsData.ProjectsData.tradeValue}
-          tradeGrowth={DashboardAnalyticsData.ProjectsData.tradeGrowth}
-          data={DashboardAnalyticsData.ProjectsData.graphData} />
-      </div>
-      <div className='flex gap-5'>
-        <MaxPriceGraph chartData={ProductPricechartGraph.chartData} chartConfig={ProductPricechartGraph.chartConfig} />
-        <AnotherGraph />
-        {/* <DuelChart/> */}
+      <div className='w-[100%]'>
+        <div className='grid grid-cols-8 auto-rows-auto gap-3'>
+          <div className='col-span-8'>
+            <h1 className='font-extrabold text-4xl mb-5 mt-5'>Dashboard</h1>
+          </div>
+          <div className='col-span-2'>
+            <NewGraph data={DashboardAnalyticsData.AgroTradeData} />
+          </div>
+          <div className='col-span-2'>
+            <NewGraph data={DashboardAnalyticsData.TraderSalesData} />
+          </div>
+          <div className='col-span-2'>
+            <NewGraph data={DashboardAnalyticsData.RetailsData} />
+          </div>
+          <div className='col-span-2'>
+            <NewGraph data={DashboardAnalyticsData.ProjectsData} />
+          </div>
+          <div className='col-span-3'>
+            <SalesStockCombo />
+          </div>
+          <div className='col-span-3'>
+            <MaxPriceGraph chartData={ProductPricechartGraph.chartData} chartConfig={ProductPricechartGraph.chartConfig} />
+          </div>
+          <div className='col-span-2'>
+            <AnalyticsCard data={UserAnalyticsData} />
+          </div>
+        </div>
       </div>
 
     </>

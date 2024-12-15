@@ -4,11 +4,10 @@ import { ITableData } from "@/interfaces/required-interfaces"
 
 
 //page: Dashboard (top cards)
-export const DashboardAnalyticsData = {
-  AgroTradeData: {
-    tradeTitle: 'AgroTrade',
-    tradeValue: '152,566,568',
-    tradeGrowth: 20.1,
+export const UserAnalyticsData = {
+    totalUserTitle: 'Total User',
+    totalUser: '156K',
+    totalUserGrowth: 20.1,
     graphData: [
 
       {
@@ -44,128 +43,94 @@ export const DashboardAnalyticsData = {
         subscription: 189,
       },
     ]
-  },
-  TradeSalesData: {
-    tradeTitle: 'Tradesales',
-    tradeValue: '78,566,25',
-    tradeGrowth: 19.7,
-    graphData: [
+}
 
-      {
-        revenue: 52365,
-        subscription: 240,
-      },
-      {
-        revenue: 42456,
-        subscription: 300,
-      },
-      {
-        revenue: 8956,
-        subscription: 200,
-      },
-      {
-        revenue: 14960,
-        subscription: 278,
-      },
-      {
-        revenue: 35645,
-        subscription: 189,
-      },
-      {
-        revenue: 9654,
-        subscription: 239,
-      },
-      {
-        revenue: 23365,
-        subscription: 278,
-      },
-      {
-        revenue: 12568,
-        subscription: 189,
-      },
+export const DashboardAnalyticsData = {
+  AgroTradeData: {
+    tradeTitle: 'AgroTrade',
+    tradeValue: '152,56,568',
+    tradeGrowth: 20.1,
+    tradeStatus: 'TrendingUp',
+    graphData: [
+      { month: "January", desktop: 0 },
+      { month: "February", desktop: 305 },
+      { month: "March", desktop: 237 },
+      { month: "April", desktop: 214 },
+      { month: "May", desktop: 824 },
+      { month: "June", desktop: 214 },
+      { month: "July", desktop: 732 },
+      { month: "August", desktop: 189 },
+      { month: "September", desktop: 985 },
+      { month: "October", desktop: 237 },
+      { month: "November", desktop: 214 },
+      { month: "December", desktop: 0 },
+    ],
+  },
+  TraderSalesData: {
+    tradeTitle: 'Tradesales',
+    tradeValue: '78,56,25',
+    tradeGrowth: 19.7,
+    tradeStatus: 'TrendingUp',
+    graphData: [
+      { month: "January", desktop: 0 },
+      { month: "February", desktop: 305 },
+      { month: "March", desktop: 189 },
+      { month: "April", desktop: 73 },
+      { month: "May", desktop: 209 },
+      { month: "June", desktop: 102 },
+      { month: "July", desktop: 305 },
+      { month: "August", desktop: 209 },
+      { month: "September", desktop: 73 },
+      { month: "October", desktop: 214 },
+      { month: "November", desktop: 214 },
+      { month: "December", desktop: 0 },
     ]
   },
   RetailsData: {
     tradeTitle: 'Retails',
-    tradeValue: '56,22,564',
+    tradeValue: '56,22,54',
     tradeGrowth: 24.4,
+    tradeStatus: 'TrendingUp',
     graphData: [
-
-      {
-        revenue: 9654,
-        subscription: 240,
-      },
-      {
-        revenue: 4256,
-        subscription: 300,
-      },
-      {
-        revenue: 39654,
-        subscription: 200,
-      },
-      {
-        revenue: 20654,
-        subscription: 278,
-      },
-      {
-        revenue: 6986,
-        subscription: 189,
-      },
-      {
-        revenue: 63256,
-        subscription: 239,
-      },
-      {
-        revenue: 7895,
-        subscription: 278,
-      },
-      {
-        revenue: 12934,
-        subscription: 189,
-      },
+      { month: "January", desktop: 0 },
+      { month: "February", desktop: 305 },
+      { month: "March", desktop: 999 },
+      { month: "April", desktop: 73 },
+      { month: "May", desktop: 209 },
+      { month: "June", desktop: 189 },
+      { month: "July", desktop: 305 },
+      { month: "August", desktop: 209 },
+      { month: "September", desktop: 73 },
+      { month: "October", desktop: 105 },
+      { month: "November", desktop: 214 },
+      { month: "December", desktop: 0 },
     ]
   },
   ProjectsData: {
     tradeTitle: 'Projects',
     tradeValue: '526,96,36',
     tradeGrowth: 9.0,
+    tradeStatus: 'TrendingDown',
     graphData: [
+      { month: "January", desktop: 0 },
+      { month: "February", desktop: 305 },
+      { month: "March", desktop: 237 },
+      { month: "April", desktop: 73 },
+      { month: "May", desktop: 189 },
+      { month: "June", desktop: 214 },
+      { month: "July", desktop: 305 },
+      { month: "August", desktop: 209 },
+      { month: "September", desktop: 73 },
+      { month: "October", desktop: 852 },
+      { month: "November", desktop: 214 },
+      { month: "December", desktop: 0 },
+    ],
 
-      {
-        revenue: 906,
-        subscription: 240,
-      },
-      {
-        revenue: 1294,
-        subscription: 300,
-      },
-      {
-        revenue: 965,
-        subscription: 200,
-      },
-      {
-        revenue: 8965,
-        subscription: 278,
-      },
-      {
-        revenue: 853,
-        subscription: 189,
-      },
-      {
-        revenue: 6589,
-        subscription: 239,
-      },
-      {
-        revenue: 986,
-        subscription: 278,
-      },
-      {
-        revenue: 4236,
-        subscription: 189,
-      },
-    ]
   },
+
 }
+
+
 
 //page: Dashboard (bottom products prices)
 export const ProductPricechartGraph = {
@@ -202,7 +167,7 @@ export const ProductPricechartGraph = {
       color: "hsl(var(--chart-5))",
     },
   } satisfies ChartConfig
-  
+
 }
 
 
@@ -505,32 +470,71 @@ export const ProduceCellDataWholesaler = {
 
 //page: Price Bound Report
 
-export const datas: ITableData [] = [
+export const datas: ITableData[] = [
   {
-      id: 1234,
-      image: 'profile-pic1.jpg',
-      businessman: "Md. Rahmatullah - Azim Uddin",
-      IDs: "021241242154 - 114542157155",
-      productName: "Potato",
-      overflowPrice: 120,
-      currentDate: "11 May, 2024 12: 56"
+    id: 1234,
+    image: 'profile-pic1.jpg',
+    businessman: "Md. Rahmatullah - Azim Uddin",
+    IDs: "021241242154 - 114542157155",
+    productName: "Potato",
+    overflowPrice: 120,
+    currentDate: "11 May, 2024 12: 56"
   },
   {
-      id: 5678,
-      image: 'profile-pic2.jpg',
-      businessman: "Md. Niloy - Toushif",
-      IDs: "4253356231 - 5698564756",
-      productName: "Banana",
-      overflowPrice: 350,
-      currentDate: "18 December, 2028 07: 10"
+    id: 5678,
+    image: 'profile-pic2.jpg',
+    businessman: "Md. Niloy - Toushif",
+    IDs: "4253356231 - 5698564756",
+    productName: "Banana",
+    overflowPrice: 350,
+    currentDate: "18 December, 2028 07: 10"
   },
   {
-      id: 3456,
-      image: 'profile-pic2.jpg',
-      businessman: "Md. Niloy - Toushif",
-      IDs: "4253356231 - 5698564756",
-      productName: "Banana",
-      overflowPrice: 350,
-      currentDate: "18 December, 2028 07: 10"
+    id: 3456,
+    image: 'profile-pic2.jpg',
+    businessman: "Md. Niloy - Toushif",
+    IDs: "4253356231 - 5698564756",
+    productName: "Banana",
+    overflowPrice: 350,
+    currentDate: "18 December, 2028 07: 10"
   }
 ]
+
+
+//..................................................................................................
+// General Report Page ID
+
+
+export const selectReportActionData = {
+  selectTitle: "Report Action",
+  selectValues1: {
+    value: "declined",
+    label: "Declined"
+  },
+  selectValues2: {
+    value: "approved",
+    label: "Approved"
+  }
+}
+
+
+export const selectStatusActionData = {
+  selectTitle: "Status",
+  selectValues1: {
+    value: "pending",
+    label: "Pending"
+  },
+  selectValues2: {
+    value: "resolved",
+    label: "Resolved"
+  }
+}
+
+
+
+
+
+
+
+
+

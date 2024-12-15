@@ -65,43 +65,61 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-const AnalyticsCard = ({ tradeTitle, tradeValue, tradeGrowth, data }: any) => {
+const AnalyticsCard = ({ data }: any) => {
   return (
     // <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-2">
-      <Card className='mb-5 min-w-[300px]'>
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-normal">{tradeTitle}</CardTitle>
-        </CardHeader>
-        <CardContent className="pb-0">
-          <div className="text-2xl font-bold">{tradeValue}</div>
-          <p className="text-xs text-muted-foreground">
-            +{tradeGrowth}% from last month
-          </p>
-          <ChartContainer config={chartConfig} className="h-[80px] w-full">
-            <LineChart
-              data={data}
-              margin={{
-                top: 5,
-                right: 10,
-                left: 10,
-                bottom: 0,
+    <Card>
+      <CardHeader className=" text-gray-800 flex flex-row items-center justify-between space-y-0 pb-2">
+        <CardTitle className="text-sm font-normal">{data.totalUserTitle}</CardTitle>
+      </CardHeader>
+      <CardContent className="pb-6">
+        <div className=" text-gray-800 text-2xl font-bold">{data.totalUser}</div>
+        <p className="text-xs text-muted-foreground">
+          +{data.totalUserGrowth}% from last month
+        </p>
+        <ChartContainer config={chartConfig} className="h-[80px] w-full">
+          <LineChart
+            data={data.graphData}
+            margin={{
+              top: 5,
+              right: 10,
+              left: 10,
+              bottom: 0,
+            }}
+          >
+            <Line
+              type="monotone"
+              strokeWidth={2}
+              dataKey="revenue"
+              activeDot={{
+                r: 6,
+                fill: "var(--color-revenue)",
               }}
-            >
-              <Line
-                type="monotone"
-                strokeWidth={2}
-                dataKey="revenue"
-                activeDot={{
-                  r: 6,
-                  fill: "var(--color-revenue)",
-                }}
-                stroke="var(--color-revenue)"
-              />
-            </LineChart>
-          </ChartContainer>
-        </CardContent>
-      </Card>
-   
+              stroke="var(--color-revenue)"
+            />
+          </LineChart>
+        </ChartContainer>
+        <div className='mt-5 text-gray-800'>
+          <div className='flex justify-between mb-5'>
+              <p className='text-sm'>Active Users</p>
+              <div className='flex gap-3 items-center justify-center'>
+                <p className='font-bold'>130000</p>
+                <div className='w-0 h-0 border-l-[8px] border-l-transparent border-l-solid border-r-[8px] border-r-transparent border-r-solid border-b-[12px] border-b-solid border-b-[#166c0d] '></div>
+              </div>
+          </div>
+          <hr className='border-gray-500 mb-1'/>
+          <div className='flex justify-between mb-5'>
+          <p className='text-sm'>Active Users</p>
+              <div className='flex gap-3 items-center justify-center'>
+                <p className='font-bold'>130000</p>
+                <div className='w-0 h-0 border-l-[8px] border-l-transparent border-l-solid border-r-[8px] border-r-transparent border-r-solid border-t-[12px] border-t-solid border-t-[#c01d1d] '></div>
+              </div>
+          </div>
+          <hr className='border-gray-500 mb-2'/>
+        </div>
+      </CardContent>
+    </Card>
+
   )
 }
 

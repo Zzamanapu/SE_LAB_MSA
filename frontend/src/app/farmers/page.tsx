@@ -2,8 +2,8 @@
 import { ProductSellGraph } from '@/components/produce-sell-graph'
 import React from 'react'
 import { FarmerAnalyticsData, produce_cell_chartConfig, NumberOfUserFarmer, ProduceCellDataFarmer } from '../../../public/Data/data'
-import AnalyticsCard from '@/components/analytics-card'
 import NumberOfUser from '@/components/number-of-user'
+import AnalyticsCard from '@/components/analytics-card'
 
 const Farmer = () => {
   return (
