@@ -1,12 +1,11 @@
 
 import React from 'react'
-import { DashboardAnalyticsData, ProductPricechartGraph, UserAnalyticsData } from '../../../public/Data/data'
+import { DashboardAnalyticsData, TotalSalesStockData, UserAnalyticsData, ProductPricechartGraph } from '../../../public/Data/data'
 import { MaxPriceGraph } from './(_components)/max-price-graph'
 import { DuelChart } from './(_components)/duel-graph'
-
-import NewGraph from '@/components/new-graph'
-import { SalesStockCombo } from './(_components)/another-graph'
+import AmountUser from '@/components/amount-user'
 import AnalyticsCard from '@/components/analytics-card'
+import { SalesStockCombo } from './(_components)/sales-stock-combo'
 
 
 const Dashboard = () => {
@@ -20,25 +19,25 @@ const Dashboard = () => {
             <h1 className='font-extrabold text-4xl mb-5 mt-5'>Dashboard</h1>
           </div>
           <div className='col-span-2'>
-            <NewGraph data={DashboardAnalyticsData.AgroTradeData} />
+            <AnalyticsCard data={DashboardAnalyticsData.AgroTradeData} />
           </div>
           <div className='col-span-2'>
-            <NewGraph data={DashboardAnalyticsData.TraderSalesData} />
+            <AnalyticsCard data={DashboardAnalyticsData.TraderSalesData} />
           </div>
           <div className='col-span-2'>
-            <NewGraph data={DashboardAnalyticsData.RetailsData} />
+            <AnalyticsCard data={DashboardAnalyticsData.RetailsData} />
           </div>
           <div className='col-span-2'>
-            <NewGraph data={DashboardAnalyticsData.ProjectsData} />
+            <AnalyticsCard data={DashboardAnalyticsData.ProjectsData} />
           </div>
           <div className='col-span-3'>
-            <SalesStockCombo />
+            <SalesStockCombo data={TotalSalesStockData} />
           </div>
           <div className='col-span-3'>
-            <MaxPriceGraph chartData={ProductPricechartGraph.chartData} chartConfig={ProductPricechartGraph.chartConfig} />
+            <MaxPriceGraph data={ProductPricechartGraph} />
           </div>
           <div className='col-span-2'>
-            <AnalyticsCard data={UserAnalyticsData} />
+            <AmountUser data={UserAnalyticsData} />
           </div>
         </div>
       </div>
@@ -46,5 +45,4 @@ const Dashboard = () => {
     </>
   )
 }
-
 export default Dashboard

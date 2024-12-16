@@ -1,50 +1,9 @@
 import { ChartConfig } from "@/components/ui/chart"
 import { ITableData } from "@/interfaces/required-interfaces"
 
-
-
 //page: Dashboard (top cards)
-export const UserAnalyticsData = {
-    totalUserTitle: 'Total User',
-    totalUser: '156K',
-    totalUserGrowth: 20.1,
-    graphData: [
 
-      {
-        revenue: 10400,
-        subscription: 240,
-      },
-      {
-        revenue: 14405,
-        subscription: 300,
-      },
-      {
-        revenue: 9400,
-        subscription: 200,
-      },
-      {
-        revenue: 5200,
-        subscription: 278,
-      },
-      {
-        revenue: 12000,
-        subscription: 189,
-      },
-      {
-        revenue: 9600,
-        subscription: 239,
-      },
-      {
-        revenue: 11244,
-        subscription: 278,
-      },
-      {
-        revenue: 26475,
-        subscription: 189,
-      },
-    ]
-}
-
+//Dashboard: top cards
 export const DashboardAnalyticsData = {
   AgroTradeData: {
     tradeTitle: 'AgroTrade',
@@ -130,59 +89,30 @@ export const DashboardAnalyticsData = {
 
 }
 
+//Dashboard: sales stock
+export const TotalSalesStockData = [
+  { month: "January", farmer_stock: 500, farmer_sales: 380, trader_stock: 700, trader_sales: 420, wholesaler_stock: 380, wholesaler_sales: 340, },
+  { month: "February", farmer_stock: 220, farmer_sales: 180, trader_stock: 440, trader_sales: 380, wholesaler_stock: 340, wholesaler_sales: 310, },
+  { month: "March", farmer_stock: 220, farmer_sales: 210, trader_stock: 250, trader_sales: 150, wholesaler_stock: 310, wholesaler_sales: 120, },
+  { month: "April", farmer_stock: 1020, farmer_sales: 920, trader_stock: 700, trader_sales: 580, wholesaler_stock: 500, wholesaler_sales: 380, },
+  { month: "May", farmer_stock: 300, farmer_sales: 210, trader_stock: 510, trader_sales: 390, wholesaler_stock: 110, wholesaler_sales: 110, },
+  { month: "June", farmer_stock: 900, farmer_sales: 780, trader_stock: 700, trader_sales: 580, wholesaler_stock: 700, wholesaler_sales: 290, },
+]
 
+//page: Dashboard: Max Price graph
+export const ProductPricechartGraph = [
+  { browser: "bean", visitors: 275, fill: "var(--color-bean)" },
+  { browser: "onion", visitors: 200, fill: "var(--color-onion)" },
+  { browser: "potato", visitors: 187, fill: "var(--color-potato)" },
+  { browser: "raddish", visitors: 173, fill: "var(--color-raddish)" },
+  { browser: "chili", visitors: 90, fill: "var(--color-chili)" },
+]
 
-//page: Dashboard (bottom products prices)
-export const ProductPricechartGraph = {
-
-  chartData: [
-    { browser: "bean", visitors: 275, fill: "var(--color-bean)" },
-    { browser: "onion", visitors: 200, fill: "var(--color-onion)" },
-    { browser: "potato", visitors: 187, fill: "var(--color-potato)" },
-    { browser: "raddish", visitors: 173, fill: "var(--color-raddish)" },
-    { browser: "chili", visitors: 90, fill: "var(--color-chili)" },
-  ],
-  chartConfig: {
-    visitors: {
-      label: "Price",
-    },
-    bean: {
-      label: "Bean",
-      color: "hsl(var(--chart-1))",
-    },
-    onion: {
-      label: "Onion",
-      color: "hsl(var(--chart-2))",
-    },
-    potato: {
-      label: "Potato",
-      color: "hsl(var(--chart-3))",
-    },
-    raddish: {
-      label: "Raddish",
-      color: "hsl(var(--chart-4))",
-    },
-    chili: {
-      label: "Chili",
-      color: "hsl(var(--chart-5))",
-    },
-  } satisfies ChartConfig
-
-}
-
-
-
-
-
-
-//---------------------------------------------------------------------------------------------------------------------
-//Farmer Page
-//page: Farmer (left top card)
-
-export const FarmerAnalyticsData = {
-  tradeTitle: 'AgroTrade',
-  tradeValue: '152,566,568',
-  tradeGrowth: 20.1,
+//Dashboard: Number of User
+export const UserAnalyticsData = {
+  totalUserTitle: 'Total User',
+  totalUser: '156K',
+  totalUserGrowth: 20.1,
   graphData: [
 
     {
@@ -220,12 +150,90 @@ export const FarmerAnalyticsData = {
   ]
 }
 
-//page: Farmer (Right top card)
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------
+//Farmer Page
+//page: Farmer: Agro Trade Card
+
+export const FarmerCardAnalyticsData = {
+  tradeTitle: 'AgroTrade',
+  tradeValue: '152,566,250',
+  tradeGrowth: 20.1,
+  graphData: [
+    { month: "January", desktop: 0 },
+    { month: "February", desktop: 305 },
+    { month: "March", desktop: 189 },
+    { month: "April", desktop: 73 },
+    { month: "May", desktop: 209 },
+    { month: "June", desktop: 102 },
+    { month: "July", desktop: 305 },
+    { month: "August", desktop: 209 },
+    { month: "September", desktop: 73 },
+    { month: "October", desktop: 214 },
+    { month: "November", desktop: 214 },
+    { month: "December", desktop: 0 },
+  ]
+}
+
+//page: Farmer: Number of user
 export const NumberOfUserFarmer = {
   type: 'Farmer',
   number: 281,
   growth: 20
 }
+
+
+//Page: Farmer: active unactive user
+export const FarmerUserAnalyticsData = {
+  totalUserTitle: 'Total Farmer',
+  totalUser: '120K',
+  totalUserGrowth: 2.1,
+  graphData: [
+
+    {
+      revenue: 2535,
+      subscription: 240,
+    },
+    {
+      revenue: 56856,
+      subscription: 300,
+    },
+    {
+      revenue: 9400,
+      subscription: 200,
+    },
+    {
+      revenue: 5200,
+      subscription: 278,
+    },
+    {
+      revenue: 5681,
+      subscription: 189,
+    },
+    {
+      revenue: 9600,
+      subscription: 239,
+    },
+    {
+      revenue: 12589,
+      subscription: 278,
+    },
+    {
+      revenue: 26475,
+      subscription: 189,
+    },
+  ]
+}
+
 
 //page: Farmer (Bottom cards)
 export const ProduceCellDataFarmer = {
@@ -265,42 +273,56 @@ export const ProduceCellDataFarmer = {
 
 }
 
-//page: Farmer & trader and wholesales (Bottom cards) config
-export const produce_cell_chartConfig = {
-  produce: {
-    label: "Produce",
-    color: "hsl(var(--chart-1))",
-  },
-  sell: {
-    label: "Sell",
-    color: "hsl(var(--chart-2))",
-  },
-} satisfies ChartConfig
-
-
-
-
 
 //------------------------------------------------------------------------------------------------
 //Trader Page
 
-//page: Trader (left top card)
-export const TraderAnalyticsData = {
+//page: Trader Analytics Card
+export const TraderCardAnalyticsData = {
   tradeTitle: 'Tradesales',
   tradeValue: '696,566,125',
   tradeGrowth: 5.1,
   graphData: [
+    { month: "January", desktop: 0 },
+    { month: "February", desktop: 305 },
+    { month: "March", desktop: 256 },
+    { month: "April", desktop: 73 },
+    { month: "May", desktop: 209 },
+    { month: "June", desktop: 102 },
+    { month: "July", desktop: 305 },
+    { month: "August", desktop: 562 },
+    { month: "September", desktop: 73 },
+    { month: "October", desktop: 214 },
+    { month: "November", desktop: 125 },
+    { month: "December", desktop: 0 },
+  ]
+}
+
+//page: Trader Number of user trader
+export const NumberOfUserTrader = {
+  type: 'Trader',
+  number: 650,
+  growth: 18
+}
+
+
+//Page: Trader: active unactive user
+export const TraderUserAnalyticsData = {
+  totalUserTitle: 'Total Trader',
+  totalUser: '10K',
+  totalUserGrowth: 9.1,
+  graphData: [
 
     {
-      revenue: 26421,
+      revenue: 2535,
       subscription: 240,
     },
     {
-      revenue: 14405,
-      subscription: 300,
+      revenue: 56856,
+      subscription: 4546,
     },
     {
-      revenue: 25615,
+      revenue: 9400,
       subscription: 200,
     },
     {
@@ -308,29 +330,22 @@ export const TraderAnalyticsData = {
       subscription: 278,
     },
     {
-      revenue: 12000,
-      subscription: 189,
+      revenue: 5681,
+      subscription: 25631,
     },
     {
-      revenue: 96586,
+      revenue: 9600,
       subscription: 239,
     },
     {
-      revenue: 11244,
+      revenue: 12589,
       subscription: 278,
     },
     {
-      revenue: 26475,
+      revenue: 5365,
       subscription: 189,
     },
   ]
-}
-
-//page: Trader (Right top card)
-export const NumberOfUserTrader = {
-  type: 'Trader',
-  number: 650,
-  growth: 18
 }
 
 

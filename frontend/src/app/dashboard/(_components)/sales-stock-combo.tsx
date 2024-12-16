@@ -17,25 +17,14 @@ import {
     ChartTooltip,
     ChartTooltipContent,
 } from "@/components/ui/chart"
-// const chartData = [
-//     { month: "January", desktop: 186, mobile: 80, tab: 80 },
-//     { month: "February", desktop: 305, mobile: 200, tab: 80 },
-//     { month: "March", desktop: 237, mobile: 120, tab: 80 },
-//     { month: "April", desktop: 73, mobile: 190, tab: 80 },
-//     { month: "May", desktop: 209, mobile: 130, tab: 80 },
-//     { month: "June", desktop: 214, mobile: 140, tab: 80 },
+// const TotalGrowthDataForAll = [
+//     { month: "January", farmer_stock: 500, farmer_sales: 380, trader_stock: 700, trader_sales: 420, wholesaler_stock: 380, wholesaler_sales: 340, },
+//     { month: "February", farmer_stock: 220, farmer_sales: 180, trader_stock: 440, trader_sales: 380, wholesaler_stock: 340, wholesaler_sales: 310, },
+//     { month: "March", farmer_stock: 220, farmer_sales: 210, trader_stock: 250, trader_sales: 150, wholesaler_stock: 310, wholesaler_sales: 120, },
+//     { month: "April", farmer_stock: 1020, farmer_sales: 920, trader_stock: 700, trader_sales: 580, wholesaler_stock: 500, wholesaler_sales: 380, },
+//     { month: "May", farmer_stock: 300, farmer_sales: 210, trader_stock: 510, trader_sales: 390, wholesaler_stock: 110, wholesaler_sales: 110, },
+//     { month: "June", farmer_stock: 900, farmer_sales: 780, trader_stock: 700, trader_sales: 580, wholesaler_stock: 700, wholesaler_sales: 290, },
 // ]
-
-const TotalGrowthDataForAll = [
-    { month: "January", farmer_stock: 500, farmer_sales: 380, trader_stock: 700, trader_sales: 420, wholesaler_stock: 380, wholesaler_sales: 340, },
-    { month: "February", farmer_stock: 220, farmer_sales: 180, trader_stock: 440, trader_sales: 380, wholesaler_stock: 340, wholesaler_sales: 310, },
-    { month: "March", farmer_stock: 220, farmer_sales: 210, trader_stock: 250, trader_sales: 150, wholesaler_stock: 310, wholesaler_sales: 120, },
-    { month: "April", farmer_stock: 1020, farmer_sales: 920, trader_stock: 700, trader_sales: 580, wholesaler_stock: 500, wholesaler_sales: 380, },
-    { month: "May", farmer_stock: 300, farmer_sales: 210, trader_stock: 510, trader_sales: 390, wholesaler_stock: 110, wholesaler_sales: 110, },
-    { month: "June", farmer_stock: 900, farmer_sales: 780, trader_stock: 700, trader_sales: 580, wholesaler_stock: 700, wholesaler_sales: 290, },
-]
-
-
 
 const chartConfig = {
     farmer_stock: {
@@ -64,7 +53,7 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
-export function SalesStockCombo() {
+export function SalesStockCombo({data}: any) {
     return (
         <Card>
             <CardHeader>
@@ -73,7 +62,7 @@ export function SalesStockCombo() {
             </CardHeader>
             <CardContent>
                 <ChartContainer config={chartConfig}>
-                    <BarChart accessibilityLayer data={TotalGrowthDataForAll}>
+                    <BarChart accessibilityLayer data={data}>
                         <CartesianGrid vertical={false} />
                         <XAxis
                             dataKey="month"

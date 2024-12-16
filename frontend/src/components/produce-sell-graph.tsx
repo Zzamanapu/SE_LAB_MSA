@@ -16,18 +16,29 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 
-export function ProductSellGraph({title, chartData, chartConfig}:any) {
+export const chartConfig = {
+  produce: {
+    label: "Produce",
+    color: "hsl(var(--chart-1))",
+  },
+  sell: {
+    label: "Sell",
+    color: "hsl(var(--chart-2))",
+  },
+} satisfies ChartConfig
+
+export function ProductSellGraph({data}:any) {
   return (
-    <Card className="w-[400px] mr-5">
+    <Card>
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle>{data.title}</CardTitle>
         <CardDescription>
           A produce cell data grpah for last 7 days
         </CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
-          <BarChart accessibilityLayer data={chartData}>
+          <BarChart accessibilityLayer data={data.chartData}>
             <XAxis
               dataKey="date"
               tickLine={false}

@@ -18,7 +18,44 @@ import {
     ChartTooltipContent,
 } from "@/components/ui/chart"
 
-export function MaxPriceGraph({ chartData, chartConfig }: any) {
+chartData: [
+    { browser: "bean", visitors: 275, fill: "var(--color-bean)" },
+    { browser: "onion", visitors: 200, fill: "var(--color-onion)" },
+    { browser: "potato", visitors: 187, fill: "var(--color-potato)" },
+    { browser: "raddish", visitors: 173, fill: "var(--color-raddish)" },
+    { browser: "chili", visitors: 90, fill: "var(--color-chili)" },
+]
+
+
+const chartConfig = {
+    visitors: {
+      label: "Price",
+    },
+    bean: {
+      label: "Bean",
+      color: "hsl(var(--chart-1))",
+    },
+    onion: {
+      label: "Onion",
+      color: "hsl(var(--chart-2))",
+    },
+    potato: {
+      label: "Potato",
+      color: "hsl(var(--chart-3))",
+    },
+    raddish: {
+      label: "Raddish",
+      color: "hsl(var(--chart-4))",
+    },
+    chili: {
+      label: "Chilli",
+      color: "hsl(var(--chart-5))",
+    },
+  } satisfies ChartConfig
+
+
+
+export function MaxPriceGraph({ data}: any) {
     const currentDate = new Date()
     const year = currentDate.getFullYear()
     const month = currentDate.getMonth();
@@ -35,7 +72,7 @@ export function MaxPriceGraph({ chartData, chartConfig }: any) {
                     <ChartContainer config={chartConfig}>
                         <BarChart
                             accessibilityLayer
-                            data={chartData}
+                            data={data}
                             layout="vertical"
                             margin={{
                                 left: 0,
