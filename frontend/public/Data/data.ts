@@ -391,23 +391,52 @@ export const ProduceCellDataTrader = {
 //------------------------------------------------------------------------------------------------
 //Wholesales Page
 
-//page: Wholesales (left top card)
+//page: Wholesales: Analytics Card
 export const WholesalerAnalyticsData = {
   tradeTitle: 'Wholesaler',
   tradeValue: '265,352,000',
   tradeGrowth: 81.1,
   graphData: [
+    { month: "January", desktop: 0 },
+    { month: "February", desktop: 305 },
+    { month: "March", desktop: 256 },
+    { month: "April", desktop: 73 },
+    { month: "May", desktop: 209 },
+    { month: "June", desktop: 102 },
+    { month: "July", desktop: 305 },
+    { month: "August", desktop: 562 },
+    { month: "September", desktop: 73 },
+    { month: "October", desktop: 214 },
+    { month: "November", desktop: 125 },
+    { month: "December", desktop: 0 },
+  ]
+}
+
+//page: Wholesales: NumerOfUser
+export const NumberOfUserWholesaler = {
+  type: 'Wholesaler',
+  number: 125,
+  growth: 5
+}
+
+
+//page WholeSales: AmoutUser
+export const WholesalerUserAnalyticsData = {
+  totalUserTitle: 'Total Trader',
+  totalUser: '10K',
+  totalUserGrowth: 9.1,
+  graphData: [
 
     {
-      revenue: 26421,
+      revenue: 2535,
       subscription: 240,
     },
     {
-      revenue: 14405,
-      subscription: 300,
+      revenue: 56856,
+      subscription: 4546,
     },
     {
-      revenue: 25615,
+      revenue: 9400,
       subscription: 200,
     },
     {
@@ -415,29 +444,22 @@ export const WholesalerAnalyticsData = {
       subscription: 278,
     },
     {
-      revenue: 12000,
-      subscription: 189,
+      revenue: 5681,
+      subscription: 25631,
     },
     {
-      revenue: 96586,
+      revenue: 9600,
       subscription: 239,
     },
     {
-      revenue: 11244,
+      revenue: 12589,
       subscription: 278,
     },
     {
-      revenue: 26475,
+      revenue: 5365,
       subscription: 189,
     },
   ]
-}
-
-//page: Wholesales (Right top card)
-export const NumberOfUserWholesaler = {
-  type: 'Wholesaler',
-  number: 125,
-  growth: 5
 }
 
 //page: Wholesales (Bottom cards)
