@@ -40,6 +40,7 @@ const chartConfig = {
 } satisfies ChartConfig
 
 const AnalyticsCard = ({data}: any) => {
+  console.log(data)
   return (
     <Card>
       <CardHeader className="p-4">

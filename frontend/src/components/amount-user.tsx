@@ -67,7 +67,7 @@ const chartConfig = {
 
 const AmountUser = ({ data }: any) => {
   return (
-    <Card>
+    <Card className='h-[100%]'>
       <CardHeader className=" text-gray-800 flex flex-row items-center justify-between space-y-0 ">
         <CardTitle className="text-sm font-normal">{data.totalUserTitle}</CardTitle>
       </CardHeader>
@@ -98,7 +98,7 @@ const AmountUser = ({ data }: any) => {
             />
           </LineChart>
         </ChartContainer>
-        <div className='mt-5 text-gray-800'>
+        <div className='mt-16 text-gray-800'>
           <div className='flex justify-between mb-5'>
               <p className='text-sm'>Active User</p>
               <div className='flex gap-1 items-center justify-center'>
